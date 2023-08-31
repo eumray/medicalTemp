@@ -39,7 +39,6 @@
     right: 0px;
     bottom: 0px;
     overflow: auto;
-    display: none;
   }
   .popup_section .popup.pop_reservation {
     background-color: #fff;
@@ -110,6 +109,17 @@
   }
   .contents_wrap .landing_page.lp1 img {
     width: 100%;
+    display: block;
+  }
+  .contents_wrap .landing_page.lp1 .video_section {
+    position: relative;
+  }
+  .contents_wrap .landing_page.lp1 .video_section .arrow_img {
+    position: absolute;
+    width: 20px;
+    bottom: 15px;
+    left: 50%;
+    margin-left: -10px;
   }
   .contents_wrap .landing_page.lp1 .main_copy {
     height: 500px;
@@ -170,7 +180,7 @@
        object-fit: cover;
   }
   .contents_wrap .landing_page.lp2 .sub_copy {
-    padding: 16px 15px 0px;
+    padding: 16px 31px 0px 28px;
     display: flex;
     justify-content: space-between;
     font-size: 30px;
@@ -343,6 +353,12 @@
     color: #FFF;
     font-family: "Centaur";
   }
+  .contents_wrap .landing_page.lp4 .section_item .lp44_sl {
+    position: relative;
+  }
+  .contents_wrap .landing_page.lp4 .section_item .lp44_sl img {
+    width: 100%;
+  }
   .contents_wrap .landing_page.lp4 .main_title {
     text-align: center;
     font-size: 26px;
@@ -414,7 +430,7 @@
   .contents_wrap .landing_page.lp5 .spec_items .spec_item .spec_title {
     height: 66px;
     border-top: 1px solid #E8E8E8;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 500;
     line-height: 32px; /* 246.154% */
     letter-spacing: -0.39px;

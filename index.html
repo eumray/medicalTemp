@@ -16,41 +16,12 @@
     
 </head>
 <body>
-    <div class="popup_section">
-        <div class="popup pop_reservation">
-            <div class="pop_title">
-                이제 당신의 차례.<br/>
-        피부 고민,  있으신가요?<br/>
-        <img src="/landing/pop_reser_t.svg"/>
-            </div>
-            <div class="pop_contents">
-                <div class="input_item">
-                    <div class="input_title">이름</div>
-                    <div class="input_contents">
-                        <input type="text" placeholder="이름을 입력해 주세요."/>
-                    </div>
-                </div>
-                <div class="input_item">
-                    <div class="input_title">휴대폰 번호</div>
-                    <div class="input_contents">
-                        <input type="phone" placeholder="-를 제외하고 입력해 주세요."/>
-                    </div>
-                </div>
-                <div class="privacy_section">
-                    <label><input type="checkbox"/>개인정보 수집동의</label>
-                    <label><input type="checkbox"/>문자 수신 및 카톡 상담 동의</label>
-                    <div class="privacy_info">※ 수집된 정보는 간편상담 안내 목적 외에 사용되지 않습니다.</div>
-                </div>
-                <div class="bt_section">
-                    <button class="default_bt reservation_bt">상담 예약하기</button>
-                </div>
-            </div>
-        </div>
-    </div>
+   
     <div class="contents_wrap">
         <div class="landing_page lp1">
-            <div class="video_seciton">
+            <div class="video_section">
                 <img src="/landing/ld01.jpg"/>
+                <img class="arrow_img" src="/landing/ic_arrow_down_w.svg"/>
             </div>
             <div class="main_copy">
                 모공은 답이 없어요.<br/>
@@ -187,7 +158,7 @@
                         <div class="swiper-slide">
                             <div class="video_section">
                                 <video width="100%" loop="true" autoplay loop muted playsinline>
-                                    <source src="/land_video/Landing Source_2_LOW.mp4" type="video/mp4">
+                                    <source src="/land_video/Landing Source_2.mp4" type="video/mp4">
                                   </video>
                             </div>
                             <div class="main_title">피부 안쪽부터 차오르는 모공</div>
@@ -264,8 +235,23 @@
                     아름다운 피부는 건강함에서 비롯됩니다.<br/>
                     건강을 되찾은 피부의 변화를 느껴보세요.
                 </div>
-                <div class="img_section">
-                    <img src="/landing/ld04.jpg"/>
+                <div class="slide_section lp44_sl">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="/landing/ld04.jpg"/>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="/landing/ld04.jpg"/>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="/landing/ld04.jpg"/>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="/landing/ld04.jpg"/>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                
                 </div>
             </div>
             <div class="section_item">
@@ -295,9 +281,9 @@
         </div>
         <div class="landing_page lp5">
             <div class="spec_items">
-                <div class="spec_item">
+                <div class="spec_item active">
                     <div class="spec_title">
-                        서서히 회복되는 피부를 느껴보세요<img src="/landing/ic_arrow_down.svg"/>
+                        1. 서서히 회복되는 피부를 느껴보세요<img src="/landing/ic_arrow_down.svg"/>
                     </div>
                     <div class="spec_contents">
                         <div class="video_section">
@@ -310,7 +296,7 @@
                 </div>
                 <div class="spec_item">
                     <div class="spec_title">
-                        모공 리액터 시술 과정을 영상으로 확인하세요<img src="/landing/ic_arrow_down.svg"/>
+                        2. 모공 리액터 시술 과정을 영상으로 확인하세요<img src="/landing/ic_arrow_down.svg"/>
                     </div>
                     <div class="spec_contents">
                         <div class="video_section">
@@ -366,7 +352,7 @@
                 </div>
                 <div class="spec_item">
                     <div class="spec_title">
-                        효과를 경험한 고객 이야기를 들어보세요<img src="/landing/ic_arrow_down.svg"/>
+                        3. 효과를 경험한 고객 이야기를 들어보세요<img src="/landing/ic_arrow_down.svg"/>
                     </div>
                     <div class="spec_contents">
                         <div class="video_section">
@@ -379,7 +365,7 @@
                 </div>
                 <div class="spec_item">
                     <div class="spec_title">
-                        모공 리액터의 검증된 효과를 확인하세요<img src="/landing/ic_arrow_down.svg"/>
+                        4. 모공 리액터의 검증된 효과를 확인하세요<img src="/landing/ic_arrow_down.svg"/>
                     </div>
                     <div class="spec_contents">
                         <div class="effect_items">
@@ -421,8 +407,28 @@
 <script>
         ScrollTrigger.create({
             trigger: ".lp2 .round_section",
-            start: "-=100",
+            start: "-=400",
             onEnter: () => { document.querySelector('.lp2 .round_section .back_img').classList.add('full_img') },
+        });
+        ScrollTrigger.create({
+            trigger: ".lp3_sl",
+            start: "-=500",
+            onEnter: () => {  swiper.autoplay.start(); },
+        });
+     
+        ScrollTrigger.create({
+            trigger: ".lp42_sl",
+            start: "-=500",
+            onEnter: () => {
+                  swiper3.autoplay.start();
+                 },
+        });
+        ScrollTrigger.create({
+            trigger: ".lp44_sl",
+            start: "-=500",
+            onEnter: () => {
+                  swiper4.autoplay.start();
+                 },
         });
         const swiper = new Swiper('.lp3_sl', {
 
@@ -437,6 +443,7 @@
             },
 
         });
+      
         const swiper2 = new Swiper('.lp4_sl', {
 
             spaceBetween: 10,
@@ -464,7 +471,22 @@
             },
 
         });
+            const swiper4 = new Swiper('.lp44_sl', {
 
+                spaceBetween: 10,
+                slidesPerView: "auto",
+                autoplay: {
+                    delay: 3000,
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true, // 페이징을 클릭하면 해당 영역으로 이동, 필요시 지정해 줘야 기능 작동
+                },
+
+            });
+        swiper.autoplay.stop();
+        swiper3.autoplay.stop();
+        swiper4.autoplay.stop();
         $(".lp5 .spec_item").click((e)=>{
 
             $(e.target).toggleClass('active')
